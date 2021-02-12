@@ -1,0 +1,21 @@
+{
+    "name": "zhanchmini/mini",
+    "description": "zhanchmini mini",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ChangHaiZhan",
+            "email": "761324952@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "zhanchmini\\mini\\": "src/"
+        }
+    }
+}
