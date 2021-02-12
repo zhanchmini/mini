@@ -1,5 +1,5 @@
-# login
-example minimum
+# Mini
+Minimal development of multiple development
 
 #Install mini [yii2 (lumen update)]
 
@@ -22,15 +22,29 @@ composer require zhanchmini/api
 
 ```
 
-#update web console
+#update web
 
 ```php
 
-$config = \zhanchmini\mini\yii2\Mini::config($config, [
+$config = \yii\helpers\ArrayHelper::merge($config,
     require __DIR__ . '/../vendor/zhanchmini/mini/src/yii2/config/web.php',
     require __DIR__ . '/../vendor/zhanchmini/api/src/yii2/config/web.php',
-    require __DIR__ . '/../vendor/zhanchmini/example/src/yii2/config/web.php',
-]);
+    require __DIR__ . '/../vendor/zhanchmini/example/src/yii2/config/web.php'
+);
+
+return $config;
+
+```
+
+#update console
+
+```php
+
+$config = \yii\helpers\ArrayHelper::merge($config,
+    require __DIR__ . '/../vendor/zhanchmini/mini/src/yii2/config/console.php',
+    require __DIR__ . '/../vendor/zhanchmini/api/src/yii2/config/console.php',
+    require __DIR__ . '/../vendor/zhanchmini/example/src/yii2/config/console.php'
+);
 
 return $config;
 
